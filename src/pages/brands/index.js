@@ -8,7 +8,6 @@ const Brands = ({data}) => {
     console.log(data.allContentfulPageBrands.nodes[0].brandsSelection)
     const title = data.allContentfulPageBrands.nodes[0].title
     const brands = data.allContentfulPageBrands.nodes[0].brandsSelection
-    //console.log (brands);
 
     return (
         <Layout>
