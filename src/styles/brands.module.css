@@ -2,7 +2,7 @@
     text-align: center;
   }
   .brands > h2 {
-    font-size: 3em;
+    font-size: 2em;
     margin-top: 80px;
   }
   .brands > h3 {
@@ -12,8 +12,8 @@
   .brand {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 80px;
-    margin: 80px 20px;
+    grid-gap: 70px;
+    margin: 70px 10px;
   }
   .brand h3 {
     text-align: center;
