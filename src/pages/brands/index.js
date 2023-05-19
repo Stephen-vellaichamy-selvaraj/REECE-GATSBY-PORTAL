@@ -46,7 +46,7 @@ query BrandsPage {
               description
             }
             thumb {
-                gatsbyImageData(sizes: "1000", width: 320, height: 170)
+              gatsbyImageData(sizes: "200")
             }
           }
         }
