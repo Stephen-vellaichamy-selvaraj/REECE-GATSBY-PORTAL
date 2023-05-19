@@ -6,7 +6,7 @@
     margin-top: 80px;
   }
   .brands > h3 {
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 400;
   }
   .brand {
@@ -21,6 +21,7 @@
     font-weight: 500;
   }
   .brand p {
-    color: #ccc;
+    color: black;
     margin-top: 4px;
+    font-size: .8em;
   }

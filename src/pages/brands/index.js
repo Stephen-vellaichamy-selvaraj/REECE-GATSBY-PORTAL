@@ -19,7 +19,7 @@ const Brands = ({data}) => {
                             <Link to = { "/brands/" + brand.slug} key= {Math.random()}>
                                 <div>
                                     {
-                                        <GatsbyImage image={getImage(brand.thumb)} alt="blog image" layout="fixed" width={1000} height={1000}/>
+                                        <GatsbyImage image={getImage(brand.thumb)} alt="blog image" layout="fixed"/>
                                     }
                                     <h3>{brand.title}</h3>
                                     <p>{brand.description.description}</p>                                    
@@ -46,7 +46,7 @@ query BrandsPage {
               description
             }
             thumb {
-              gatsbyImageData(sizes: "200")
+                gatsbyImageData(sizes: "1000", width: 320, height: 170)
             }
           }
         }
