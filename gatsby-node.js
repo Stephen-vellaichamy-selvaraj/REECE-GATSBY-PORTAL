@@ -27,5 +27,6 @@ exports.createPages = async ({ graphql, actions }) => {
 	createRedirect({
     fromPath: `/brands/bigdog/`,
     toPath: `https://www.reece.com/brands/bigdog`,
+    statusCode: 200
   });   
 }
