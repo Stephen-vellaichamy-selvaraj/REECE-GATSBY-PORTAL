@@ -1,13 +1,6 @@
 module.exports = {
   plugins: [
-    {
-      resolve: `gatsby-plugin-redirect-to`,
-      options: {
-        force: true,
-        isPermanent: true,
-        redirectInBrowser: true,
-      },
-    },
+    `gatsby-plugin-gatsby-cloud`,  
     `gatsby-plugin-image`,  
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
