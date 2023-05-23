@@ -1553,6 +1553,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "apiRunnerAsync": () => (/* binding */ apiRunnerAsync)
 /* harmony export */ });
 var plugins = [{
+  name: 'gatsby-plugin-gatsby-cloud',
+  plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-gatsby-cloud/gatsby-ssr.js */ "./node_modules/gatsby-plugin-gatsby-cloud/gatsby-ssr.js"),
+  options: {
+    "plugins": []
+  }
+}, {
   name: 'gatsby-plugin-image',
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-image/gatsby-ssr.js */ "./node_modules/gatsby-plugin-image/gatsby-ssr.js"),
   options: {
@@ -1908,6 +1914,34 @@ HTML.propTypes = {
   body: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
   postBodyComponents: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().array)
 };
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-gatsby-cloud/gatsby-browser.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-gatsby-cloud/gatsby-browser.js ***!
+  \*******************************************************************/
+/***/ (() => {
+
+"use strict";
+// noop
+
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-gatsby-cloud/gatsby-ssr.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-gatsby-cloud/gatsby-ssr.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.wrapRootElement = void 0;
+var _gatsbyBrowser = __webpack_require__(/*! ./gatsby-browser */ "./node_modules/gatsby-plugin-gatsby-cloud/gatsby-browser.js");
+exports.wrapRootElement = _gatsbyBrowser.wrapRootElement;
 
 /***/ }),
 
