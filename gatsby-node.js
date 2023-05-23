@@ -7,7 +7,7 @@ exports.createPages = async ({ graphql, actions }) => {
   createRedirect({ 
     fromPath: '/register/', 
     toPath: 'https://www.reece.com/register', 
-    statusCode: 200, force: true
+    statusCode: 200,
   })
 
   const { data } = await graphql(`
