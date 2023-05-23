@@ -17,6 +17,7 @@
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-gatsby-cloud": "^5.10.0",
     "gatsby-plugin-image": "^3.10.0",
+    "gatsby-plugin-redirect-to": "^1.0.2",
     "gatsby-plugin-sharp": "^5.9.0",
     "gatsby-source-contentful": "^8.10.0",
     "gatsby-source-filesystem": "^5.9.0",

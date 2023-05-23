@@ -1,16 +1,10 @@
 const path = require(`path`)
 
-exports.createPages = async ({ actions }) => {
-	const { createRedirect } = actions;
-
-  createRedirect({
-    fromPath: `/about/`,
-    toPath: `https://www.reece.com/about`,
-    statusCode: 200,
-  });  
-}
-
 exports.createPages = async ({ graphql, actions }) => {   
+  
+  //Redirects
+  const { createRedirect } = actions
+  createRedirect({ fromPath: '/about/', toPath: 'https://www.reece.com/about', statusCode: 200 })
 
   const { data } = await graphql(`
     query BrandPage {

@@ -1,14 +1,11 @@
 module.exports = {
-  plugins: [`gatsby-plugin-gatsby-cloud`],
   plugins: [
     {
-      resolve: "gatsby-source-contentful",
+      resolve: `gatsby-plugin-redirect-to`,
       options: {
-        downloadLocal: true,
-        spaceId: 'qllwu7j6zru5',
-        accessToken: 'pS3JGNOz9VhomeADNnGkOEF-G8ioMasOA35P_HRJ2sI',
-        environment:'master',
-        host: `preview.contentful.com`,
+        force: true,
+        isPermanent: true,
+        redirectInBrowser: true,
       },
     },
     `gatsby-plugin-image`,  
@@ -30,7 +27,17 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images/`,
       },
-    }
+    },
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        downloadLocal: true,
+        spaceId: 'qllwu7j6zru5',
+        accessToken: 'pS3JGNOz9VhomeADNnGkOEF-G8ioMasOA35P_HRJ2sI',
+        environment:'master',
+        host: `preview.contentful.com`,
+      },
+    },    
   ],
   siteMetadata: {
     title: 'Reece',
