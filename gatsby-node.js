@@ -3,6 +3,12 @@ const path = require(`path`)
 exports.createPages = async ({ graphql, actions }) => {
 
 	const { createRedirect } = actions; 
+  
+  createRedirect({
+    fromPath: `/brands/bigdog/`,
+    toPath: `https://www.reece.com/brands/bigdog`,
+    statusCode: 200,
+  });   
 
   const { data } = await graphql(`
     query BrandPage {
@@ -23,10 +29,4 @@ exports.createPages = async ({ graphql, actions }) => {
       context: { slug: node.slug }
     })
   })
-  
-	createRedirect({
-    fromPath: `/brands/bigdog/`,
-    toPath: `https://www.reece.com/brands/bigdog`,
-    statusCode: 200,
-  });   
 }
