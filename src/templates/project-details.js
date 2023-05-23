@@ -13,7 +13,7 @@ const ProjectDetails = ({ data }) => {
         <h2>{title}</h2>
         <h3>{stack}</h3>
         <div className={styles.featured}>
-          <Img fluid={featuredImg.childImageSharp.fluid} />
+          {/* <Img fluid={featuredImg.childImageSharp.fluid} /> */}
         </div>
         <div className={styles.html} dangerouslySetInnerHTML={{ __html: html }} />
       </div>
