@@ -3,10 +3,10 @@ const path = require(`path`)
 exports.createPages = async ({ graphql, actions }) => {
 
 	const { createRedirect } = actions; 
-  
+
   createRedirect({
-    fromPath: `/brands/bigdog/`,
-    toPath: `https://www.reece.com/brands/bigdog`,
+    fromPath: `/about/`,
+    toPath: `https://www.reece.com/about`,
     statusCode: 200,
   });   
 
@@ -23,10 +23,17 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   data.allContentfulPageBrands.nodes[0].brandsSelection.forEach(node => {
-    actions.createPage({
-      path: '/brands/'+ node.slug,
-      component: path.resolve('./src/templates/brand-details.js'),
-      context: { slug: node.slug }
-    })
-  })
+    if (!node.slug == "bigdog"){
+      console.log("Yes I am not here")
+      actions.createPage({
+        path: '/brands/'+ node.slug,
+        component: path.resolve('./src/templates/brand-details.js'),
+        context: { slug: node.slug }
+      })
+    }
+    else
+      {
+        console.log("Yes I am here")
+      }    
+    )
 }
