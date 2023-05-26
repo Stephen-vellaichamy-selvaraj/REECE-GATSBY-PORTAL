@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
+import { Link as GatsbyLink } from "gatsby"
 
 export default function Navbar() {
   const data = useStaticQuery( graphql`
@@ -20,7 +21,8 @@ export default function Navbar() {
       <h1>{ title }</h1>
       <div className="links">
         <Link to="/">Home</Link>
-        <Link to="/register">Register</Link>
+        {/* <GatsbyLink to="/register">Register</GatsbyLink> */}
+        <a href="https://www.reece.com/about" target="_blank" rel="noopener norefferer">Register</a>
         <Link to="/brands">Brands</Link>
       </div>
     </nav>
