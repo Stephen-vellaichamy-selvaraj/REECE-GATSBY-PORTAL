@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
-import { Link as GatsbyLink } from "gatsby"
 
 export default function Navbar() {
   const data = useStaticQuery( graphql`
