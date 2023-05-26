@@ -21,7 +21,6 @@ export default function Navbar() {
       <h1>{ title }</h1>
       <div className="links">
         <Link to="/">Home</Link>
-        {/* <GatsbyLink to="/register">Register</GatsbyLink> */}
         <a href="https://www.reece.com/about" target="_blank" rel="noopener norefferer">Register</a>
         <Link to="/brands">Brands</Link>
       </div>
