@@ -19,9 +19,8 @@ export default function Navbar() {
     <nav>
       <h1>{ title }</h1>
       <div className="links">
-        <Link to="/">Home</Link>    
-        <a href="https://www.reece.com/register" target="_blank" rel="noopener norefferer">Register</a>        
-        {/* <Link to="/register">Register</Link> */}
+        <Link to="/">Home</Link>
+        <Link to="https://www.reece.com/register">Register</Link>
         <Link to="/brands">Brands</Link>
       </div>
     </nav>
