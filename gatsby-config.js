@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 module.exports = {
   plugins: [
     `gatsby-plugin-gatsby-cloud`,  
@@ -25,10 +27,10 @@ module.exports = {
       resolve: "gatsby-source-contentful",
       options: {
         downloadLocal: true,
-        spaceId: 'qllwu7j6zru5',
-        accessToken: 'pS3JGNOz9VhomeADNnGkOEF-G8ioMasOA35P_HRJ2sI',
-        environment:'master',
-        host: `preview.contentful.com`,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        environment: process.env.CONTENTFUL_ENVIRONMENT,
+        host: process.env.CONTENTFUL_HOST,
       },
     },    
   ],
