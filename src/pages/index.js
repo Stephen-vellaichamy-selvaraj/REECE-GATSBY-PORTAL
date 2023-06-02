@@ -16,7 +16,6 @@ export default function Home({data}) {
           <p>Reece Business to customer website</p>
           <Link className={styles.btn} to="/brands">Brands</Link>
         </div>
-        <div id="lexcontainer">&nbsp;</div>
         <GatsbyImage image={image} alt="blog image" layout="fixed" width={1000} height={1000}/>
       </section>
     </Layout>

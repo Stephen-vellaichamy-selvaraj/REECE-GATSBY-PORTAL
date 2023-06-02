@@ -22,6 +22,7 @@ export default function Navbar() {
         <Link to="/">Home</Link>
         <Link to="https://www.reece.com/register">Register</Link>
         <Link to="/brands">Brands</Link>
+        <Link to="/test">Test</Link>
       </div>
     </nav>
   )
