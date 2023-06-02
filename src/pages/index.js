@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import * as styles from '../styles/home.module.css'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
+// Home Page
 export default function Home({data}) {
   const image = getImage(data.allContentfulSiteSettings.edges[0].node.coverImage);
   return (
@@ -15,6 +16,7 @@ export default function Home({data}) {
           <p>Reece Business to customer website</p>
           <Link className={styles.btn} to="/brands">Brands</Link>
         </div>
+        <div id="lexcontainer">&nbsp;</div>
         <GatsbyImage image={image} alt="blog image" layout="fixed" width={1000} height={1000}/>
       </section>
     </Layout>
