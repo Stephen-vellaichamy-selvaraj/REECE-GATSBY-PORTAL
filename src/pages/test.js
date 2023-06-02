@@ -9,7 +9,7 @@ function MyPage() {
       <Script src="https://reeceusa.my.salesforce.com/lightning/lightning.out.js"></Script>
       
       <Script> 
-          $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
+          {/* $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
               function() {                  // Callback once framework and app load
                   $Lightning.createComponent(
                       "lightning:flow",    // top-level component of your app
@@ -20,7 +20,7 @@ function MyPage() {
                       }
                   )
               },    'https://reeceusa.my.salesforce-sites.com/'  // Site endpoint
-          );
+          ); */}
       </Script> 
 
       <h4>Cancel Appointment</h4> 
