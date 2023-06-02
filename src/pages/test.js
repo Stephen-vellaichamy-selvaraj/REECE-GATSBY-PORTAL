@@ -6,9 +6,9 @@ function MyPage() {
   return(
     <Layout>
       <div id="lexcontainer">Test</div>
-      <script src="https://reeceusa.my.salesforce.com/lightning/lightning.out.js"></script>
+      <script src="https://reeceusa.my.salesforce-sites.com/lightning/lightning.out.js"></script>
       <script> 
-        $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
+        {/* $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
             function() {                  // Callback once framework and app load
                 $Lightning.createComponent(
                     "lightning:flow",    // top-level component of your app
@@ -19,10 +19,8 @@ function MyPage() {
                     }
                 )
             },    'https://reeceusa.my.salesforce-sites.com/'  // Site endpoint
-        );
+        ); */}
       </script>
-
-
     </Layout>
   )
 }
