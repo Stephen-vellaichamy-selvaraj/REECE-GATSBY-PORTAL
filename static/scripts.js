@@ -1,4 +1,3 @@
-<Script>
 
 console.log("I am inside here");
 
@@ -14,4 +13,3 @@ function() {                  // Callback once framework and app load
         )
     },    'https://reeceusa.my.salesforce-sites.com/'  // Site endpoint
 );
-</Script>
