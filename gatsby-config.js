@@ -1,5 +1,6 @@
 module.exports = {
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,  
     `gatsby-plugin-image`,  
     `gatsby-plugin-sharp`,
@@ -30,7 +31,13 @@ module.exports = {
         environment:'master',
         host: `preview.contentful.com`,
       },
-    },    
+    },
+    {
+      resolve: 'gatsby-plugin-load-script',
+        options: {
+          src: 'https://reeceusa.my.salesforce-sites.com/lightning/lightning.out.js', // Change to the script filename
+        },
+    },         
   ],
   siteMetadata: {
     title: 'Reece',
