@@ -37,7 +37,7 @@ module.exports = {
         options: {
           src: 'https://reeceusa.my.salesforce-sites.com/lightning/lightning.out.js', // Change to the script filename
         },
-    },         
+    },           
   ],
   siteMetadata: {
     title: 'Reece',
