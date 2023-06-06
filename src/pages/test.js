@@ -6,7 +6,7 @@ import Helmet from 'react-helmet'
 function MyPage() {
   return(
     <Layout>
-      <div id="lexcontainer">Test</div>
+      <div id="lexcontainer"></div>
       <Script src="/scripts.js" />      
     </Layout>
   )

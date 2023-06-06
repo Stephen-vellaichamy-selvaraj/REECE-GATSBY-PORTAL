@@ -1,6 +1,6 @@
 
 console.log("I am inside here");
-
+window.location.reload();
 $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
 function() {                  // Callback once framework and app load
         $Lightning.createComponent(
