@@ -1,7 +1,7 @@
 
 console.log("I am inside here");
 //window.location.reload();
-eval("$A.get('e.force:refreshView').fire();");
+eval("$Lightning.get('e.force:refreshView').fire();");
 $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
 function() {                  // Callback once framework and app load
         $Lightning.createComponent(
