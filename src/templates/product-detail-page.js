@@ -10,7 +10,6 @@ const ProductDetails = ({ data }) => {
       <div className={styles.details}>
         <h2>Name:  {name}</h2><br />
         <img src={imageUrls.large}></img><br />
-
         {
             productOverview.split(";").map(function(item, idx) {
                 return (
