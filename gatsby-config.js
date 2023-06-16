@@ -37,7 +37,21 @@ module.exports = {
         options: {
           src: 'https://reeceusa.my.salesforce-sites.com/lightning/lightning.out.js', // Change to the script filename
         },
-    },           
+    },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        // This type will contain the remote schema Query type
+        typeName: "AWSAppSync",
+        // This is the field under which it's accessible
+        fieldName: "ReeceAPI",
+        // URL to query from        
+        url: "https://api.reece.com/graphql",
+        headers: {
+          "x-max-api-secret":"1upRhSWC1B"
+        }      
+      },
+    },             
   ],
   siteMetadata: {
     title: 'Reece',

@@ -26,7 +26,7 @@ const BrandDetails = ({ data }) => {
 export default BrandDetails
 
 export const query = graphql`
-query TopicBrand($slug: String) {
+query TopicBrand($slug: String!) {
   allContentfulAssemblyBrands(filter: {slug: {eq: $slug}}) {
     nodes {
       slug
