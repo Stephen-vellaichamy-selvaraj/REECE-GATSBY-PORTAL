@@ -8,10 +8,19 @@ const ProductDetails = ({ data }) => {
   return (
     <Layout>
       <div className={styles.details}>
-        <h2>{name}</h2>
-        <img src={imageUrls.large}></img>
-        <h3>{productOverview}</h3>
-        <h3>{featuresAndBenefits}</h3>
+        <h2>Name:  {name}</h2><br />
+        <img src={imageUrls.large}></img><br />
+
+        {
+            productOverview.split(";").map(function(item, idx) {
+                return (
+                    <span key={idx}>
+                      <ul><li><h4>{item}</h4></li></ul>                        
+                      </span>
+                )
+            })
+        }
+        <br /><h4><b>Features And Benefits:</b> {featuresAndBenefits}</h4>
       </div>
     </Layout>
   )
@@ -25,6 +34,7 @@ export const query = graphql`
             product(productInput: {productId: $id}) {
                 id
                 name
+                manufacturerName
                 imageUrls {
                     large
                 }
