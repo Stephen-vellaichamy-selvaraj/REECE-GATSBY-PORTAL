@@ -3,7 +3,7 @@ name: Daily Gatsby Build
 on:
   schedule:
     # Run every day at 10:00am UTC
-    - cron: "35 18 * * *"
+    - cron: "45 18 * * *"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -12,6 +12,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: GATSBY_WEBHOOK
+      - name: Gatsby Webhook
         run: |
-          curl -X POST ${{secrets.gatsby_webhook}} --header "x-gatsby-cache: false"
+          curl -X POST ${{secrets.GATSBY_WEBHOOK}} --header "x-gatsby-cache: false"
