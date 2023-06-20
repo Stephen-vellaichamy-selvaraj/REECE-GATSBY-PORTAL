@@ -3,7 +3,7 @@ name: Daily Gatsby Build
 on:
   schedule:
     # Run every day at 10:00am UTC
-    - cron: "45 17 * * *"
+    - cron: "50 19 * * *"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
