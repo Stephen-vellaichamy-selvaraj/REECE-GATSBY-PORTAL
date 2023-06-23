@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import * as styles from '../styles/home.module.css'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
+// Home Page add
 export default function Home({data}) {
   const image = getImage(data.allContentfulSiteSettings.edges[0].node.coverImage);
   return (

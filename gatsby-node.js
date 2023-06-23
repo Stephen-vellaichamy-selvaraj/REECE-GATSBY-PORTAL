@@ -10,7 +10,8 @@ exports.createPages = async ({ graphql, actions }) => {
     statusCode: 200,
   })
 
-  const { data } = await graphql(`
+  //Contentful Static Pages
+  const contenfulCollection  = await graphql(`
     query BrandPage {
       allContentfulPageBrands {
         nodes {
@@ -20,14 +21,35 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `)
-
-  data.allContentfulPageBrands.nodes[0].brandsSelection.forEach(node => {
-    actions.createPage({
-      path: '/brands/'+ node.slug,
-      component: path.resolve('./src/templates/brand-details.js'),
-      context: { slug: node.slug }
+  `).then(result => {
+      result.data.allContentfulPageBrands.nodes[0].brandsSelection.forEach(node => {
+        actions.createPage({
+          path: `/brands/${node.slug}`,
+          component: path.resolve('./src/templates/brand-details.js'),
+          context: { slug: node.slug },
+        }); 
+      });               
     })
-  })  
 
-}
+    // Product service static pages
+    const productcollection = await graphql(`
+      query MyQuery {
+        ReeceAPI {
+          allProducts {
+            id
+          }
+        }
+      }
+      `).then(result => {
+        result.data.ReeceAPI.allProducts.forEach(node => {
+            actions.createPage({
+            path: `/products/${node.id}`,
+            component: path.resolve('./src/templates/product-detail-page.js'),
+            context: { id: node.id }
+          }); 
+        });               
+      })    
+
+    return Promise.all([contenfulCollection, productcollection])
+  }
+  
